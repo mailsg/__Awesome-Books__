@@ -158,7 +158,7 @@ To run tests, run the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [https://github.com/mailsg/Awesome-Books/issues](../../issues/).
+Feel free to check the [https://github.com/mailsg/__Awesome-Books__/issues](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
