@@ -63,12 +63,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
     
-      NA
-
-
-##    Presentation of the Project
-      
-      NA      
+   [Live Link](https://mailsg.github.io/__Awesome-Books__/) 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
