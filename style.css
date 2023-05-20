@@ -65,3 +65,66 @@ hr {
   margin-left: 7rem;
   width: 3.5rem;
 }
+
+/* ...existing styles... */
+
+/* ...existing styles... */
+
+.navbar {
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-title h1 {
+  margin: 0;
+}
+
+.navbar-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links ul li {
+  margin-left: 10px;
+  position: relative;
+}
+
+.navbar-links ul li:first-child {
+  margin-left: 0;
+}
+
+.navbar-links ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+
+.navbar-links ul li a:not(:last-child)::after {
+  content: "|";
+  margin-left: 5px;
+}
+
+footer {
+  padding: 20px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  border: 2px solid #000;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* .navbar-links ul li .separator {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    margin-left: 5px;
+    font-weight: bold;
+  } */

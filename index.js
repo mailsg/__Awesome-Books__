@@ -1,5 +1,4 @@
-/*  eslint-disable max-classes-per-file, no-unused-vars, no-use-before-define */
-
+/*  eslint-disable max-classes-per-file, no-unused-vars */
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -14,15 +13,16 @@ class Library {
 
   renderTable() {
     const tableContainer = document.getElementById('table-container');
+    const table = document.getElementById('books-table');
+    const tbody = table.getElementsByTagName('tbody')[0];
+    tbody.innerHTML = '';
 
     if (this.books.length === 0) {
-      tableContainer.innerHTML = '';
       tableContainer.style.display = 'none';
       return;
     }
 
-    tableContainer.innerHTML = '';
-    const table = document.createElement('table');
+    tableContainer.style.display = 'block';
 
     this.books.forEach((book, index) => {
       const rowColor = index % 2 === 0 ? 'row-grey' : 'row-white';
@@ -43,11 +43,8 @@ class Library {
       removeButtonCell.appendChild(removeButton);
       row.appendChild(removeButtonCell);
 
-      table.appendChild(row);
+      tbody.appendChild(row);
     });
-
-    tableContainer.appendChild(table);
-    tableContainer.style.display = 'block';
   }
 
   addBook() {
@@ -83,5 +80,39 @@ document.addEventListener('DOMContentLoaded', () => {
     library.addBook();
   });
 
+  const booksLink = document.getElementById('books-link');
+  const addLink = document.getElementById('add-link');
+  const contactLink = document.getElementById('contact-link');
+
+  booksLink.addEventListener('click', () => {
+    addLink.classList.remove('active');
+    contactLink.classList.remove('active');
+    booksLink.classList.add('active');
+    document.getElementById('books-section').style.display = 'block';
+    document.getElementById('add-section').style.display = 'none';
+    document.getElementById('contact-section').style.display = 'none';
+  });
+
+  addLink.addEventListener('click', () => {
+    booksLink.classList.remove('active');
+    contactLink.classList.remove('active');
+    addLink.classList.add('active');
+    document.getElementById('books-section').style.display = 'none';
+    document.getElementById('add-section').style.display = 'block';
+    document.getElementById('contact-section').style.display = 'none';
+  });
+
+  contactLink.addEventListener('click', () => {
+    booksLink.classList.remove('active');
+    addLink.classList.remove('active');
+    contactLink.classList.add('active');
+    document.getElementById('books-section').style.display = 'none';
+    document.getElementById('add-section').style.display = 'none';
+    document.getElementById('contact-section').style.display = 'block';
+  });
+
   library.renderTable();
+
+  // Set the list section as the default on page load
+  booksLink.click();
 });
