@@ -112,7 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('contact-section').style.display = 'block';
   });
 
-  // Set the list section as the default on page load
   booksLink.click();
 
   library.renderTable();
