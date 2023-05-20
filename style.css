@@ -1,0 +1,67 @@
+.container {
+    text-align: center;
+    padding: 20px;
+}
+  
+.form-container {
+    margin-bottom: 20px;
+}
+  
+.input-container {
+    margin-bottom: 10px;
+}
+  
+.table-container {
+    display: none;
+    border: 1px solid lightgray;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 50%;
+    margin-left: 25%;
+    overflow-x: auto
+}
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+  
+table td {
+    padding: 5px;
+    text-align: left;
+    white-space: nowrap; /* Prevent line breaks within table cells */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+  
+.row-grey {
+    background-color: lightgray;
+}
+  
+.row-white {
+    background-color: white;
+}
+  
+.remove-button {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 5px 10px;
+    float: right;
+    cursor: pointer;
+}
+  
+.remove-button:hover {
+    background-color: black;
+    color: white;
+}
+  
+hr {
+    width: 10rem;
+}
+  
+#add-button {
+    margin-left: 7rem;
+    width: 3.5rem;
+}
