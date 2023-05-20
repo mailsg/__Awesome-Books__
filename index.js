@@ -1,4 +1,5 @@
 /*  eslint-disable max-classes-per-file, no-unused-vars */
+/* global luxon */
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -111,8 +112,21 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('contact-section').style.display = 'block';
   });
 
-  library.renderTable();
-
   // Set the list section as the default on page load
   booksLink.click();
+
+  library.renderTable();
+
+  const currentDateElement = document.getElementById('current-date');
+  const currentDate = luxon.DateTime.now().toLocaleString({
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    second: '2-digit',
+    timeZoneName: 'short',
+  });
+
+  currentDateElement.textContent = currentDate;
 });
