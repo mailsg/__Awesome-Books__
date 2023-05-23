@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: darkgray;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  margin-top: 5rem;
+}
+
+.form-container {
+  margin-bottom: 20px;
+}
+
+.input-container {
+  margin-bottom: 10px;
+}
+
+.table-container {
+  display: none;
+  border: 1px solid lightgray;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 50%;
+  margin-left: 25%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+table td {
+  padding: 5px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 700;
+}
+
+.row-grey {
+  background-color: lightgray;
+}
+
+.row-white {
+  background-color: white;
+}
+
+.remove-button {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 5px 10px;
+  float: right;
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  background-color: black;
+  color: white;
+}
+
+hr {
+  width: 10rem;
+}
+
+#add-button {
+  margin-left: 7rem;
+  width: 3.5rem;
+}
+
+.navbar {
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-title h1 {
+  margin: 0;
+}
+
+.navbar-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links ul li {
+  margin-left: 10px;
+  position: relative;
+}
+
+.navbar-links ul li:first-child {
+  margin-left: 0;
+}
+
+.navbar-links ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  font-weight: 700;
+}
+
+.navbar-links ul li a:not(:last-child)::after {
+  content: "|";
+  margin-left: 5px;
+}
+
+footer {
+  padding: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  border: 2px solid #000;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: white;
+}
+
+footer p {
+  font-weight: bold;
+}
+
+#current-date {
+  text-align: right;
+  font-size: 18px;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+#contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.contact-content {
+  max-width: 400px;
+  text-align: left;
+  margin-left: 35rem;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 3rem;
+}
+
+.contact-text {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.contact-list {
+  padding-left: 5rem;
+  text-align: left;
+}
